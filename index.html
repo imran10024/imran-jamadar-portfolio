@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imran Jamadar — Senior Staff Architect</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<title>Imran Jamadar — Engineering Director, Senior Staff Architect & Engineering Leader</title>
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -128,7 +128,7 @@
   }
   h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.75rem, 5vw, 4.25rem);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
     line-height: 1.1;
     color: #e6f1ff;
     margin-bottom: 1rem;
@@ -141,7 +141,7 @@
   .hero-tagline {
     font-size: 1.125rem;
     color: var(--text-muted);
-    max-width: 560px;
+    max-width: 600px;
     margin-bottom: 2rem;
     font-weight: 300;
     line-height: 1.75;
@@ -238,7 +238,6 @@
     border-top: 1px solid var(--border);
     padding-top: 1.25rem;
   }
-  .stat-item { }
   .stat-number {
     font-family: 'DM Serif Display', serif;
     font-size: 1.75rem;
@@ -304,7 +303,7 @@
     font-weight: 300;
   }
 
-  /* IMPACT */
+  /* IMPACT / SKILLS */
   .impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -331,8 +330,9 @@
     justify-content: center;
     margin-bottom: 1rem;
   }
+  .impact-icon svg { color: var(--gold); }
   .impact-card h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: 0.5rem;
@@ -341,20 +341,13 @@
   .impact-card p {
     font-size: 0.875rem;
     color: var(--text-muted);
-    line-height: 1.7;
-  }
-  .impact-card .metric {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.5rem;
-    color: var(--gold);
-    display: block;
-    margin-top: 1rem;
+    line-height: 1.6;
   }
 
-  /* EXPERIENCE */
+  /* EXPERIENCE TIMELINE */
   .timeline {
     position: relative;
-    padding-left: 2rem;
+    margin-top: 2rem;
   }
   .timeline::before {
     content: '';
@@ -365,655 +358,69 @@
   }
   .timeline-item {
     position: relative;
-    margin-bottom: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3.5rem;
   }
-  .timeline-item::before {
-    content: '';
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-marker {
     position: absolute;
-    left: -2rem;
-    top: 0.5rem;
+    left: -4px; top: 8px;
     width: 9px; height: 9px;
     border-radius: 50%;
     background: var(--gold);
-    border: 2px solid var(--bg);
-    transform: translateX(-4px);
+    box-shadow: 0 0 0 4px var(--bg);
   }
-  .timeline-item.active::before {
-    box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
-  }
-  .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  .time-meta {
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     margin-bottom: 0.5rem;
   }
-  .timeline-company {
-    font-size: 0.75rem;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.25rem;
-  }
-  .timeline-role {
-    font-size: 1.1rem;
-    font-weight: 500;
+  .job-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
     color: var(--white);
+    line-height: 1.2;
   }
-  .timeline-period {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    white-space: nowrap;
-    border: 1px solid var(--border);
-    padding: 0.2rem 0.6rem;
-    border-radius: 100px;
-  }
-  .timeline-content {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    line-height: 1.75;
-  }
-  .timeline-bullets {
-    list-style: none;
-    margin-top: 0.75rem;
-  }
-  .timeline-bullets li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.4rem;
-    font-size: 0.875rem;
-    color: var(--text-muted);
-  }
-  .timeline-bullets li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--gold);
-    font-size: 0.7rem;
-    top: 0.2rem;
-  }
-
-  /* SKILLS */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-  .skill-group {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-  }
-  .skill-group-title {
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .skill-tag {
-    font-size: 0.775rem;
-    padding: 0.3rem 0.7rem;
-    background: rgba(201,168,76,0.07);
-    border: 1px solid rgba(201,168,76,0.2);
-    color: var(--slate-light);
-    border-radius: var(--radius);
-  }
-
-  /* EDUCATION */
-  .edu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  .edu-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 1.75rem;
-  }
-  .edu-degree {
+  .company {
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--white);
-    margin-bottom: 0.3rem;
-  }
-  .edu-school {
-    font-size: 0.875rem;
-    color: var(--gold);
-  }
-
-  /* CONTACT */
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .contact-info { }
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.75rem;
-  }
-  .contact-icon {
-    width: 40px; height: 40px;
-    flex-shrink: 0;
-    background: rgba(201,168,76,0.1);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .contact-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.2rem;
-  }
-  .contact-value {
-    font-size: 0.95rem;
-    color: var(--white);
-  }
-  .contact-value a {
-    color: var(--gold);
-    text-decoration: none;
-  }
-  .contact-form {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-  .form-row {
+    color: var(--slate-light);
     margin-bottom: 1.25rem;
   }
-  .form-row label {
-    display: block;
-    font-size: 0.8rem;
+  .job-desc {
     color: var(--text-muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    max-width: 760px;
+    margin-bottom: 1.5rem;
   }
-  .form-row input,
-  .form-row textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 0.6rem 0.9rem;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .form-row input:focus,
-  .form-row textarea:focus { border-color: var(--gold); }
-  .form-row textarea { resize: vertical; min-height: 100px; }
-  .form-submit {
-    width: 100%;
-    padding: 0.75rem;
-    background: var(--gold);
-    color: var(--navy);
-    border: none;
-    border-radius: var(--radius);
-    font-weight: 500;
-    font-size: 0.9rem;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    transition: background 0.2s;
-  }
-  .form-submit:hover { background: var(--gold-light); }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  footer p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-  .footer-links {
-    display: flex;
+  .job-highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    max-width: 800px;
+    margin-top: 1rem;
+  }
+  .highlight-group h4 {
+    font-size: 0.9rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .highlight-group h4::before {
+    content: '▪';
+    color: var(--gold);
+  }
+  .highlight-group ul {
     list-style: none;
-  }
-  .footer-links a {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
   }
-  .footer-links a:hover { color: var(--gold); }
-
-  /* DIVIDER */
-  .full-bleed {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+  .highlight-group li {
+    margin-bottom: 0.4rem;
+    padding-left: 0.75rem;
+    position: relative;
   }
-
-  /* SCROLL REVEAL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { padding: 7rem 1.5rem 3rem; }
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-card { display: none; }
-    section { padding: 4rem 1.5rem; }
-    .contact-wrapper { grid-template-columns: 1fr; }
-    footer { padding: 1.5rem; }
-  }
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">IJ</a>
-  <ul class="nav-links">
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-grid">
-    <div>
-      <p class="hero-eyebrow">Senior Staff Architect</p>
-      <h1>Imran <em>Jamadar</em></h1>
-      <p class="hero-tagline">I solve the hard enterprise problems — scale, integration, AI adoption — so 100+ engineers have a foundation worth building on.</p>
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          Bengaluru, India
-        </div>
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          20+ years experience
-        </div>
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          Open to relocation · UK Visa eligible
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get in touch</a>
-        <a href="#experience" class="btn-outline">View experience</a>
-      </div>
-    </div>
-    <div class="hero-card reveal">
-      <div class="avatar">IJ</div>
-      <h3>Imran Jamadar</h3>
-      <p class="role">Sr Staff Architect · GE Healthcare</p>
-      <p style="font-size:0.85rem; color: var(--text-muted); line-height:1.7;">Building cloud-native SaaS foundations, agentic AI systems, and the integration standards that scale across 3 continents.</p>
-      <div class="stat-row">
-        <div class="stat-item">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Years in engineering</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">$5B+</div>
-          <div class="stat-label">Revenue unlocked</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Engineers mentored</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">30%</div>
-          <div class="stat-label">AI workflow speedup</div>
-        </div>
-      </div>
-      <div class="badge-row">
-        <span class="badge">AWS</span>
-        <span class="badge">LangGraph</span>
-        <span class="badge">Kafka</span>
-        <span class="badge">Kubernetes</span>
-        <span class="badge">HIPAA</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- IMPACT -->
-<section id="impact">
-  <p class="section-label">Principal-level contributions</p>
-  <h2>Selected impact</h2>
-  <p class="section-sub">Architecture decisions that outlast projects — adopted as org-wide standards across product lines.</p>
-  <div class="impact-grid">
-    <div class="impact-card reveal">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-      </div>
-      <h3>Multi-region SaaS integration backbone</h3>
-      <p>Owned GE Healthcare's multi-region integration backbone spanning 5+ SaaS products and partner ERP (Oracle), processing millions of events daily via SNS/SQS/Kafka with idempotent, observable pipelines.</p>
-      <span class="metric">$5B+ revenue enabled</span>
-    </div>
-    <div class="impact-card reveal reveal-delay-1">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-      </div>
-      <h3>Agentic Mesh — distributed AI orchestration</h3>
-      <p>Architected LangGraph-based agent orchestration replacing sequential scripts with parallelised pipelines; built internal RAG tooling over architecture records and runbooks.</p>
-      <span class="metric">30% faster workflow execution</span>
-    </div>
-    <div class="impact-card reveal reveal-delay-2">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-      </div>
-      <h3>IaC provisioning — Terraform + ArgoCD</h3>
-      <p>Drove IaC adoption across the platform, cutting environment provisioning from days to under 2 hours and enabling full DR drills. Authored 12+ ADRs and the integration governance handbook.</p>
-      <span class="metric">Days → &lt;2 hours provisioning</span>
-    </div>
-    <div class="impact-card reveal">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-      </div>
-      <h3>Canonical integration patterns — adopted org-wide</h3>
-      <p>Defined auth, retry/idempotency, and event versioning standards adopted as the org-wide standard across 100+ engineers; ran biweekly architecture reviews with Sr Staff engineers across 3 regions.</p>
-      <span class="metric">100+ engineers, 3 regions</span>
-    </div>
-    <div class="impact-card reveal reveal-delay-1">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-      </div>
-      <h3>Monolith → event-driven microservices</h3>
-      <p>Modernised 2 monoliths to event-driven microservices architecture; doubled deployment frequency and enabled independent service rollbacks significantly reducing MTTR.</p>
-      <span class="metric">2× deployment frequency</span>
-    </div>
-    <div class="impact-card reveal reveal-delay-2">
-      <div class="impact-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-      </div>
-      <h3>Loan origination pipeline rebuild — HP</h3>
-      <p>Rebuilt SOA-based loan origination pipeline at Hewlett-Packard; service contracts adopted as internal standard for the Banking & Financial Services vertical.</p>
-      <span class="metric">4 days → &lt;6 hours processing</span>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <p class="section-label">Career</p>
-  <h2>Experience</h2>
-  <p class="section-sub">Two decades building systems that scale — from clinical workflows to global enterprise platforms.</p>
-  <div class="timeline">
-    <div class="timeline-item active reveal">
-      <div class="timeline-header">
-        <div>
-          <p class="timeline-company">GE Healthcare</p>
-          <p class="timeline-role">Senior Staff Architect</p>
-        </div>
-        <span class="timeline-period">2011 – Present · Bengaluru</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li>Architected end-to-end enterprise platform — multi-tenancy, subscription framework, and integration layer connecting SaaS products and Oracle ERP with full OAuth2/OIDC, data transformation, and HIPAA-compliant multi-region consistency.</li>
-        <li>Defined platform-wide event infrastructure standards — async, idempotent pipelines (SNS/SQS/Kafka), DLQ and replay patterns adopted across all product teams.</li>
-        <li>Set cloud-native architecture direction; authored 12+ ADRs and the integration governance handbook (patterns, versioning policy, SLA contracts).</li>
-        <li>Built the Agentic Mesh (LangGraph + custom retry/fanout); reduced institutional knowledge retrieval from hours to seconds with internal RAG tooling.</li>
-        <li>Championed AI-assisted engineering across 3 teams: code assist, automated test generation, log summarisation.</li>
-        <li>Partnered with Product, SRE, Security, and Compliance to define platform SLAs, integration contracts, and GDPR/HIPAA data-handling policies.</li>
-      </ul>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-header">
-        <div>
-          <p class="timeline-company">Nous Info Systems</p>
-          <p class="timeline-role">Team Lead, Engineering</p>
-        </div>
-        <span class="timeline-period">2010 – 2011</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li>Led a 6-engineer team building physician workflow tools; improved task completion time ~50%.</li>
-        <li>Reduced post-release defects 30% via structured code review and automated regression practices.</li>
-      </ul>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-header">
-        <div>
-          <p class="timeline-company">Hewlett-Packard</p>
-          <p class="timeline-role">Software Engineer — SOA & Integration</p>
-        </div>
-        <span class="timeline-period">2007 – 2010</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li>Rebuilt loan origination integration pipeline, cutting end-to-end processing from ~4 days to under 6 hours.</li>
-        <li>SOA service contracts adopted as the internal standard for the Banking & Financial Services vertical.</li>
-      </ul>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-header">
-        <div>
-          <p class="timeline-company">Misys Healthcare Systems</p>
-          <p class="timeline-role">Software Engineer</p>
-        </div>
-        <span class="timeline-period">2005 – 2007</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li>Built core clinical workflow modules; consolidated 4 fragmented screens into a unified patient summary.</li>
-        <li>Usability testing confirmed 35% reduction in navigation steps for clinical staff.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <p class="section-label">Technical expertise</p>
-  <h2>Skills</h2>
-  <p class="section-sub">A principal-level toolkit spanning cloud, AI, integration, and governance.</p>
-  <div class="skills-grid">
-    <div class="skill-group reveal">
-      <p class="skill-group-title">Languages</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">JavaScript</span>
-      </div>
-    </div>
-    <div class="skill-group reveal reveal-delay-1">
-      <p class="skill-group-title">Cloud & Infrastructure</p>
-      <div class="skill-tags">
-        <span class="skill-tag">AWS (SNS, SQS, API GW, EKS, ECS, Lambda)</span>
-        <span class="skill-tag">Kubernetes</span>
-        <span class="skill-tag">Terraform</span>
-        <span class="skill-tag">ArgoCD</span>
-        <span class="skill-tag">GitLab CI</span>
-        <span class="skill-tag">Jenkins</span>
-      </div>
-    </div>
-    <div class="skill-group reveal reveal-delay-2">
-      <p class="skill-group-title">Integration & API</p>
-      <div class="skill-tags">
-        <span class="skill-tag">REST</span>
-        <span class="skill-tag">OAuth2 / OIDC / JWT</span>
-        <span class="skill-tag">Event-driven patterns</span>
-        <span class="skill-tag">Idempotency</span>
-        <span class="skill-tag">Schema versioning</span>
-        <span class="skill-tag">Kafka</span>
-      </div>
-    </div>
-    <div class="skill-group reveal">
-      <p class="skill-group-title">AI / LLM</p>
-      <div class="skill-tags">
-        <span class="skill-tag">OpenAI</span>
-        <span class="skill-tag">Anthropic / Claude</span>
-        <span class="skill-tag">LangChain</span>
-        <span class="skill-tag">LangGraph</span>
-        <span class="skill-tag">RAG pipelines</span>
-        <span class="skill-tag">Chroma</span>
-        <span class="skill-tag">Prompt engineering</span>
-      </div>
-    </div>
-    <div class="skill-group reveal reveal-delay-1">
-      <p class="skill-group-title">Observability</p>
-      <div class="skill-tags">
-        <span class="skill-tag">ELK Stack</span>
-        <span class="skill-tag">Grafana</span>
-        <span class="skill-tag">Distributed tracing</span>
-      </div>
-    </div>
-    <div class="skill-group reveal reveal-delay-2">
-      <p class="skill-group-title">Compliance & Architecture</p>
-      <div class="skill-tags">
-        <span class="skill-tag">HIPAA</span>
-        <span class="skill-tag">GDPR</span>
-        <span class="skill-tag">KMS encryption</span>
-        <span class="skill-tag">Audit logging</span>
-        <span class="skill-tag">Multi-tenancy</span>
-        <span class="skill-tag">Distributed systems</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <p class="section-label">Academic background</p>
-  <h2>Education</h2>
-  <div class="edu-grid">
-    <div class="edu-card reveal">
-      <p class="edu-degree">M.Tech, Software Systems (Data Analytics)</p>
-      <p class="edu-school">BITS Pilani</p>
-    </div>
-    <div class="edu-card reveal reveal-delay-1">
-      <p class="edu-degree">B.E., Computer Science</p>
-      <p class="edu-school">Visvesvaraya Technological University (VTU)</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <p class="section-label">Let's connect</p>
-  <h2>Get in touch</h2>
-  <p class="section-sub">Open to principal architect, CTO advisory, and global leadership roles. Skilled Worker Visa eligible for the UK.</p>
-  <div class="contact-wrapper">
-    <div class="contact-info">
-      <div class="contact-item reveal">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        </div>
-        <div>
-          <p class="contact-label">Phone</p>
-          <p class="contact-value">+91 99024 88777</p>
-        </div>
-      </div>
-      <div class="contact-item reveal reveal-delay-1">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </div>
-        <div>
-          <p class="contact-label">Email</p>
-          <p class="contact-value"><a href="mailto:imran10024@gmail.com">imran10024@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="contact-item reveal reveal-delay-2">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </div>
-        <div>
-          <p class="contact-label">LinkedIn</p>
-          <p class="contact-value"><a href="https://linkedin.com/in/imran-jamadar-354477a" target="_blank">linkedin.com/in/imran-jamadar</a></p>
-        </div>
-      </div>
-      <div class="contact-item reveal">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        </div>
-        <div>
-          <p class="contact-label">Location</p>
-          <p class="contact-value">Bengaluru, India · Open to UK relocation</p>
-        </div>
-      </div>
-    </div>
-    <div class="contact-form reveal">
-      <div class="form-row">
-        <label>Your name</label>
-        <input type="text" placeholder="Jane Smith">
-      </div>
-      <div class="form-row">
-        <label>Your email</label>
-        <input type="email" placeholder="jane@company.com">
-      </div>
-      <div class="form-row">
-        <label>Message</label>
-        <textarea placeholder="Tell me about the opportunity..."></textarea>
-      </div>
-      <button class="form-submit" onclick="handleSubmit(this)">Send message</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Imran Jamadar · Senior Staff Architect</p>
-  <ul class="footer-links">
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</footer>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function handleSubmit(btn) {
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#2ecc71';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send message';
-      btn.style.background = '';
-      btn.style.color = '';
-    }, 3000);
-  }
-</script>
-</body>
-</html>
