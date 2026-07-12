@@ -434,6 +434,46 @@
     top: 0.2rem;
   }
 
+  /* LEADERSHIP */
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .leadership-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    position: relative;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .leadership-card:hover {
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-3px);
+  }
+  .leadership-icon {
+    width: 40px; height: 40px;
+    border-radius: var(--radius);
+    background: rgba(201,168,76,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .leadership-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  .leadership-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
   /* SKILLS */
   .skills-grid {
     display: grid;
@@ -647,6 +687,7 @@
   <ul class="nav-links">
     <li><a href="#impact">Impact</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#leadership">Leadership</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -657,7 +698,7 @@
 <div class="hero">
   <div class="hero-grid">
     <div>
-      <p class="hero-eyebrow">Senior Staff Architect</p>
+      <p class="hero-eyebrow">Senior Software Staff Architect &amp; Engineering Leader</p>
       <h1>Imran <em>Jamadar</em></h1>
       <p class="hero-tagline">I solve the hard enterprise problems — scale, integration, AI adoption — so 100+ engineers have a foundation worth building on.</p>
       <div class="hero-meta">
@@ -682,7 +723,7 @@
     <div class="hero-card reveal">
       <div class="avatar">IJ</div>
       <h3>Imran Jamadar</h3>
-      <p class="role">Sr Staff Architect · GE Healthcare</p>
+      <p class="role">Sr Staff Architect &amp; Engineering Leader · GE Healthcare</p>
       <p style="font-size:0.85rem; color: var(--text-muted); line-height:1.7;">Building cloud-native SaaS foundations, agentic AI systems, and the integration standards that scale across 3 continents.</p>
       <div class="stat-row">
         <div class="stat-item">
@@ -694,8 +735,8 @@
           <div class="stat-label">Revenue unlocked</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Engineers mentored</div>
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Engineers led globally</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">30%</div>
@@ -715,7 +756,7 @@
 
 <!-- IMPACT -->
 <section id="impact">
-  <p class="section-label">Principal-level contributions</p>
+  <p class="section-label">Principal-level contribution &amp; engineering leadership</p>
   <h2>Selected impact</h2>
   <p class="section-sub">Architecture decisions that outlast projects — adopted as org-wide standards across product lines.</p>
   <div class="impact-grid">
@@ -780,7 +821,7 @@
       <div class="timeline-header">
         <div>
           <p class="timeline-company">GE Healthcare</p>
-          <p class="timeline-role">Senior Staff Architect</p>
+          <p class="timeline-role">Senior Staff Architect &amp; Engineering Leader</p>
         </div>
         <span class="timeline-period">2011 – Present · Bengaluru</span>
       </div>
@@ -831,6 +872,43 @@
         <li>Built core clinical workflow modules; consolidated 4 fragmented screens into a unified patient summary.</li>
         <li>Usability testing confirmed 35% reduction in navigation steps for clinical staff.</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <p class="section-label">Engineering leadership</p>
+  <h2>People leadership &amp; resource management</h2>
+  <p class="section-sub">Building the organizations, budgets, and culture behind the architecture — not just the systems themselves.</p>
+  <div class="leadership-grid">
+    <div class="leadership-card reveal">
+      <div class="leadership-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <h3>Scalable team management</h3>
+      <p>Directed a high-performing global organization of 50+ engineers across three continents, managing multidisciplinary squads containing researchers, machine learning experts, backend developers, and data specialists.</p>
+    </div>
+    <div class="leadership-card reveal reveal-delay-1">
+      <div class="leadership-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <h3>Financial oversight &amp; budgeting</h3>
+      <p>Directed and optimized the annual project and resource budgets for core platform infrastructure, balancing operational cost against global compute demands for multi-region frameworks.</p>
+    </div>
+    <div class="leadership-card reveal reveal-delay-2">
+      <div class="leadership-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-6"></path></svg>
+      </div>
+      <h3>Culture &amp; performance</h3>
+      <p>Implemented structured performance feedback loops, targeted mentorship paths, and career development roadmaps, significantly increasing retention and developing the next generation of staff tech leaders.</p>
+    </div>
+    <div class="leadership-card reveal">
+      <div class="leadership-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+      </div>
+      <h3>Cross-functional strategy</h3>
+      <p>Co-owned the platform strategy alongside Product Leads, aligning business success metrics, engineering capacity, and corporate compliance targets (GDPR/HIPAA).</p>
     </div>
   </div>
 </section>
@@ -900,6 +978,16 @@
         <span class="skill-tag">Audit logging</span>
         <span class="skill-tag">Multi-tenancy</span>
         <span class="skill-tag">Distributed systems</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <p class="skill-group-title">People &amp; Resource Leadership</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Global team management</span>
+        <span class="skill-tag">Budget ownership</span>
+        <span class="skill-tag">Performance &amp; mentorship</span>
+        <span class="skill-tag">Career pathing</span>
+        <span class="skill-tag">Cross-functional strategy</span>
       </div>
     </div>
   </div>
@@ -989,6 +1077,7 @@
   <ul class="footer-links">
     <li><a href="#impact">Impact</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#leadership">Leadership</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </footer>
